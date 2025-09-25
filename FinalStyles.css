@@ -1,0 +1,59 @@
+#topHeader {
+    background-color:#EE5A24;
+    border-bottom: 1px pink;
+}
+#topHeader a {
+    text-align: right;
+    color:black;
+    font-weight: 800;
+    font-size: 1rem;
+    text-decoration: none;
+}
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+/* Footer*/
+}
+.default-footer {
+    background-color: black;
+}
+.top-footer {
+    color:white;
+    font-weight: 600;
+}
+.top-footer a {
+    text-decoration: none;
+}
+
+
+.col-12{
+    background-color:#EE5A24;
+}
+.bottom footer p{
+    color: white;
+}
+/*start of homepage styling*/
+.top-hero-section{
+   background-color: antiquewhite; 
+   color: black;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-weight: 400;
+}
+.size-ig{
+    width: 100px;
+    padding: 5px;
+}
+
+/* fontawesome icons*/
+
+.fa-brands {
+    color: plum;
+}
+
+
+.fa-solid {
+    color: plum;
+}
+
