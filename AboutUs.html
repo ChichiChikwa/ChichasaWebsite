@@ -1,72 +1,33 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Learn about CHICHASA Foundation's story, mission, and the three young women who founded a movement for sustainable development.">
 
-    <!-- Bootstrap CSS -->
-    <link href="bootstrap-5.1.3-dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="fontawesome-free-6.1.1-web/css/all.css" rel="stylesheet">
-    <!--Custom internal styling-->
-
-    <style>
-      .container {
-        position: relative;
-        width: 100%;
-      }
-      
-      .image {
-        opacity: 1;
-        display: block;
-        width: 100%;
-        height: auto;
-        transition: .5s ease;
-        backface-visibility: hidden;
-      }
-      
-      .middle {
-        transition: .5s ease;
-        opacity: 0;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        text-align: center;
-      }
-      
-      .container:hover .image {
-        opacity: 0.3;
-      }
-      
-      .container:hover .middle {
-        opacity: 1;
-      }
-      
-      .text {
-        background-color:#c23616;
-        color: white;
-        font-size: 16px;
-        padding: 16px 32px;
-      }
-      </style>
+    <!-- Bootstrap CSS (CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome (CDN) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom styling -->
     <link href="FinalStyles.css" rel="stylesheet">
-    
-    <title>About Us-Chichasa</title>
 
-  
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="logo.docx.jpg">
+
+    <title>About Us - CHICHASA Foundation</title>
   </head>
-  <!--body-->
   <body>
-    <!--Header-->
+    <!-- Header -->
     <header>
-      <div class="p-xl-2  p-lg-2" id="topHeader">
+      <div class="p-xl-2 p-lg-2" id="topHeader">
         <div class="container">
           <div class="row">
             <div class="col-12 text-end">
-              <a class="p-xl-2  p-lg-2" href=""><i class="fa-solid fa-phone"></i>+1 (203)-675-7215</a>
-              <a class="p-xl-2  p-lg-2" href=""><i class="fa-solid fa-envelope"></i>chichasa@gmail.com</a>
+              <a class="p-xl-2 p-lg-2" href="tel:+12036757215"><i class="fa-solid fa-phone"></i> +1 (203)-675-7215</a>
+              <a class="p-xl-2 p-lg-2" href="mailto:chichasa@gmail.com"><i class="fa-solid fa-envelope"></i> chichasa@gmail.com</a>
             </div>
           </div>
         </div>
@@ -74,185 +35,174 @@
       <div id="bottomHeader">
         <div class="container-fluid">
           <nav class="navbar navbar-dark bg-black navbar-expand-md justify-content-lg-center">
-           <a class="navbar-brand" href="index.html">
-            <img src="logo.docx.jpg" alt="logo image" width="150px">
-           </a>
-           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-              <li class="nav-item active">
-                <a  class="nav-link" href="AboutUs.html">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="meetourfounders.html">Meet Our Founders</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="avisioninaction.html">A Vision in Action</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contactus.html">Contact Us</a>
-              </li>
-            
-            </ul>
+            <a class="navbar-brand" href="index.html">
+              <img src="logo.docx.jpg" alt="CHICHASA Foundation Logo" width="150px">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="AboutUs.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="meetourfounders.html">Meet Our Founders</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="avisioninaction.html">A Vision in Action</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contactus.html">Contact Us</a>
+                </li>
+              </ul>
             </div>
           </nav>
         </div>
       </div>
     </header>
-    <!--faded Image introduction-->
 
-    <Section class="vision-section">
-      <div class="container">
-        <img src="A vision in Action.jpg" alt="Avatar" class="image" style="width:100%">
+    <!-- Faded Image Introduction -->
+    <section class="vision-section">
+      <div class="vision-container">
+        <img src="a-vision-in-action.jpg" alt="CHICHASA team working together on community projects" class="image">
         <div class="middle">
-          <div class="text">A Vision in action</div>
+          <div class="vision-overlay-text">A Vision in Action</div>
         </div>
       </div>
-    </Section>
-     <!--Top part-->
-     <Section class="our-story-section">
-       <div class="container-fluid p-1 p-sm-3">
-         <div class="row">
-           <div class="col-12 text-center">
+    </section>
+
+    <!-- Our Story -->
+    <section class="our-story-section py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center mb-4" data-aos="fade-up">
             <h2>Our Story</h2>
             <hr>
-           </div>
-           <div class="col-md-3">
-            <img class="img-fluid" src="IMG_7510.JPG" alt="founders pose with volunteers">
+          </div>
+          <div class="col-md-3" data-aos="fade-right">
+            <img class="img-fluid rounded" src="IMG_7510.JPG" alt="CHICHASA founders posing with volunteers after an event">
             <hr>
-           </div>
-           <div class="col-md-9">
-            <p> This initiative began in July of 2019 as small pieces of a puzzle in the minds of three young ladies with diverse backgrounds, interests, and passions. They were all living separate lives, trying to make a difference in whatever small ways they could. When they crossed paths, the world they imagined and desired to create drew them together. Even though they valued individuality, they knew that the community was far superior, so they banded together and founded CHICHASA. The name is composed of the initial letters of their respective names. Why? This is because it highlights individual interests that influence the organization's overall direction. </p>
-            <p><span style="color:black;">CHI:</span> 
-            This represents Chisunta Chikwamu (5th from left). She was born as the only girl in a family of three in Kabwe, Zambia. In 2018, she served as Headgirl for the board of prefects at Fatima Girls' secondary school, where she excelled in all academic disciplines and was an outstanding student. In addition, she was a member of the Red Cross Association, Anti-Corruption Commission, and Public Speaking. She improved her communication, public speaking, and advocacy skills as a result of her involvement in these clubs. Her journey toward justice and peace began here. Chisunta is concerned with equal opportunities for all people, regardless of identity, age, gender, or race. The majority of her interests are based on a feminist worldview.
+          </div>
+          <div class="col-md-9" data-aos="fade-left">
+            <p>This initiative began in July of 2019 as small pieces of a puzzle in the minds of three young ladies with diverse backgrounds, interests, and passions. They were all living separate lives, trying to make a difference in whatever small ways they could. When they crossed paths, the world they imagined and desired to create drew them together. Even though they valued individuality, they knew that the community was far superior, so they banded together and founded CHICHASA. The name is composed of the initial letters of their respective names. Why? This is because it highlights individual interests that influence the organization's overall direction.</p>
+            <p><span class="text-brand"><b>CHI:</b></span>
+              This represents Chisunta Chikwamu (5th from left). She was born as the only girl in a family of three in Kabwe, Zambia. In 2018, she served as Headgirl for the board of prefects at Fatima Girls' secondary school, where she excelled in all academic disciplines and was an outstanding student. In addition, she was a member of the Red Cross Association, Anti-Corruption Commission, and Public Speaking. She improved her communication, public speaking, and advocacy skills as a result of her involvement in these clubs. Her journey toward justice and peace began here. Chisunta is concerned with equal opportunities for all people, regardless of identity, age, gender, or race. The majority of her interests are based on a feminist worldview.
             </p>
-            <p><span style="color:#EA2027;">CHA:</span>
-              This represents Chanda Leo (4th from left). She was born in Kitwe, Zambia. She then attended Mpelembe Secondary School. Due to her love and concern for the environment, she adopted a vegan lifestyle. diet. Despite being told multiple times that her diet was a performance, she remains vegan eight years later. Through her diet, she saw the benefits of a healthy lifestyle and switched entirely to organic products. After experiencing the benefits of this life, she desired a similar life for others, which sparked her interest in medicine. Chanda desires a world in which everyone has access to sustainable and high-quality healthcare.
+            <p><span class="text-brand"><b>CHA:</b></span>
+              This represents Chanda Leo (4th from left). She was born in Kitwe, Zambia. She then attended Mpelembe Secondary School. Due to her love and concern for the environment, she adopted a vegan lifestyle. Despite being told multiple times that her diet was a performance, she remains vegan eight years later. Through her diet, she saw the benefits of a healthy lifestyle and switched entirely to organic products. After experiencing the benefits of this life, she desired a similar life for others, which sparked her interest in medicine. Chanda desires a world in which everyone has access to sustainable and high-quality healthcare.
             </p>
-            <p><span style="color:#EE5A24;">SA:</span>
-              This represents Samantha Chizalema (4th from left). She was born in Lusaka, Zambia. In 2017, she served as Headgirl for the board of prefects at Ibenga Girls' secondary school, where she excelled in all academic subjects and was an outstanding student. Samatha was a member of the Zambia Robotics Team and has served as a leader on numerous teams. Her actions are motivated by her calm and collected demeanor. As a result of her leadership and concern for the environment, she helmed a number of successful ventures, including a sustainable sole fashion design business.
-
+            <p><span class="text-brand-light"><b>SA:</b></span>
+              This represents Samantha Chizalema (4th from left). She was born in Lusaka, Zambia. In 2017, she served as Headgirl for the board of prefects at Ibenga Girls' secondary school, where she excelled in all academic subjects and was an outstanding student. Samantha was a member of the Zambia Robotics Team and has served as a leader on numerous teams. Her actions are motivated by her calm and collected demeanor. As a result of her leadership and concern for the environment, she helmed a number of successful ventures, including a sustainable sole fashion design business.
             </p>
-      
-      <p>It can be said that fate brought the three ladies together and through meaningful conversations and a strong conviction to do something about the wrongs they had witnessed, including injustices to those in need and environmental degradation, in their society and the world at large, they decided to begin a movement towards human and environmental well-being.</p>
+            <p>It can be said that fate brought the three ladies together and through meaningful conversations and a strong conviction to do something about the wrongs they had witnessed, including injustices to those in need and environmental degradation, in their society and the world at large, they decided to begin a movement towards human and environmental well-being.</p>
             <hr>
-           </div>
-         </div>
-       </div>
-     </Section>
+          </div>
+        </div>
+      </div>
+    </section>
 
-     <!--More about Us-->
-     <section class="top-hero-section pt-4 pb-5" >
+    <!-- Who We Are -->
+    <section class="top-hero-section pt-5 pb-5">
       <div class="container">
-        <div class="row text-center">
+        <div class="row text-center" data-aos="fade-up">
           <div class="col-md-12">
-            <h1 style="color:#c23616;">Who we are</h1>
-          
+            <h1 class="text-brand">Who We Are</h1>
             <p>
-              We are a youth-led organization that seeks to educate the general public on the significance of human development and environmental awareness by providing quality services through volunteer work. We seek meaningful partnerships that foster the creation of a society in which everyone is free, safe, and has access to opportunities for quality growth in order to secure the future for future generations.  The goal is to create a world in which the most disadvantaged (women and children) have access to quality healthcare, education, and equal opportunity.
+              We are a youth-led organization that seeks to educate the general public on the significance of human development and environmental awareness by providing quality services through volunteer work. We seek meaningful partnerships that foster the creation of a society in which everyone is free, safe, and has access to opportunities for quality growth in order to secure the future for future generations. The goal is to create a world in which the most disadvantaged (women and children) have access to quality healthcare, education, and equal opportunity.
             </p>
           </div>
         </div>
       </div>
     </section>
+
     <hr>
-    <section class="pt-3 pb-4">
+
+    <!-- Motto & Mission -->
+    <section class="pt-4 pb-4">
       <div class="container">
-        <div class="row align-items-center">
+        <div class="row align-items-center" data-aos="fade-up">
           <div class="col-md-5">
-          
-            <h1 style="color:#c23616;">Motto</h1>
-            <p>A Vision in action. </p><br>
-              <h1  style="color:#c23616;">Mission Statement</h1>
-              <p>To inspire human and environmental well-being today and for future generations. </p><br>
+            <h1 class="text-brand">Motto</h1>
+            <p>A Vision in Action.</p>
+            <br>
+            <h1 class="text-brand">Mission Statement</h1>
+            <p>To inspire human and environmental well-being today and for future generations.</p>
           </div>
           <div class="col-md-7">
-            <img class="img-fluid" src="The begining.jpg" width="450" height="450"alt="Recycle poster">
+            <img class="img-fluid rounded" src="the-beginning.jpg" alt="CHICHASA's first recycling campaign poster">
           </div>
         </div>
       </div>
     </section>
-    <section class="top-hero-section">
-      <div class="row text-center">
-        <div class="col-md-12">
-          <h1 style="color:#c23616;">Get involved Now</h1>
-        
-          <p>We believe every vision should be given a chance to be turned into action. Do you care deeply about social justice or change? Join us or collaborate with us and add your story to ours.</p>
-          <a style ="background-color:#c23616 ;" class="btn btn " href="contactus.html" role="button">click for more</a>
+
+    <!-- Get Involved CTA -->
+    <section class="top-hero-section py-5">
+      <div class="container">
+        <div class="row text-center" data-aos="fade-up">
+          <div class="col-md-12">
+            <h1 class="text-brand">Get Involved Now</h1>
+            <p>We believe every vision should be given a chance to be turned into action. Do you care deeply about social justice or change? Join us or collaborate with us and add your story to ours.</p>
+            <a class="btn btn-brand" href="contactus.html" role="button">Click for More</a>
+          </div>
         </div>
       </div>
     </section>
 
-
-    <!--Footer-->
-    
+    <!-- Footer -->
     <footer class="default-footer">
-      <div class="container top-footer p-md-3 p-1">
+      <div class="container top-footer p-md-4 p-2">
         <div class="row">
-          <div class="col-md-6 pl-4 pr-4">
-            <img class="img-fluid" src="logo.docx.jpg" width="100" alt="">
-            <p>
-              <h5>Connect With US</h5>
-              Check out our social media and be part of visions that sprout into actions.
-            </p>
-            <a href="https://www.facebook.com/CHICHASAFoundation"><i class="fa-brands fa-2x fa-facebook"></i></a>
-            <a href="https://www.facebook.com/CHICHASAFoundation"><i class="fa-brands fa-2x fa-whatsapp"></i></a>
-            <a href="https://www.facebook.com/CHICHASAFoundation"><i class="fa-brands fa-2xl fa-instagram"></i></a>
-            <a href="https://www.facebook.com/CHICHASAFoundation"><i class="fa-brands fa-2xl fa-twitter"></i></a>
+          <div class="col-md-6 mb-4">
+            <img class="img-fluid mb-3" src="logo.docx.jpg" width="100" alt="CHICHASA Foundation Logo">
+            <h5>Connect With Us</h5>
+            <p>Check out our social media and be part of visions that sprout into actions.</p>
+            <a href="https://www.facebook.com/CHICHASAFoundation" aria-label="Facebook"><i class="fa-brands fa-2x fa-facebook"></i></a>
+            <a href="https://wa.me/12036757215" aria-label="WhatsApp"><i class="fa-brands fa-2x fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/chichasa_foundation/" aria-label="Instagram"><i class="fa-brands fa-2x fa-instagram"></i></a>
+            <a href="https://twitter.com/CHICHASAFound" aria-label="Twitter"><i class="fa-brands fa-2x fa-twitter"></i></a>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6 footer-contact">
+            <h5>Contact Us</h5>
+            <a href="tel:+12036757215"><i class="fa-solid fa-phone"></i> +1 (203)-675-7215</a><br>
+            <a href="mailto:cmchikwamu@gmail.com"><i class="fa-solid fa-envelope"></i> cmchikwamu@gmail.com</a>
+            <p>New Haven, Connecticut</p>
 
-            <div class="col-md-6 contact">
-              <h5>Contact Us</h5>
-             
-                <a style="color:plum;" href=""><i class="fa-solid fa-phone"></i>+1 (203)-675-7215</a><br>
-                <a style="color:plum;" href=""><i class="fa-solid fa-envelope"></i>cmchikwamu@gmail.com</a><br>
-                <p>
-                  New Haven, Connecticut
-                </p><br>
-               
-                <a style="color:plum;"  href=""><i class="fa-solid fa-phone"></i>+1 (321)-444-9672</a><br>
-                <a style="color:plum;" href=""><i class="fa-solid fa-envelope"></i>nmwiinga@gmail.com</a><br>
-                <p>
-                  Orlando, Florida
-                </p><br>
-              
-                <a style="color:plum;" href=""><i class="fa-solid fa-phone"></i>+1 (917)-889-466</a><br>
-                <a style="color:plum;" href=""><i class="fa-solid fa-envelope"></i>chandaleo41@gmail.com</a><br>
-                <p>
-                  College Park, Maryland
-                </p><br>
-              
-                <a style="color:plum;" href=""><i class="fa-solid fa-phone"></i>+260761955619</a><br>
-                <a style="color:plum;" href=""><i class="fa-solid fa-envelope"></i>chizalemasammy@gmail.com</a>
-                <p>
-                  Lusaka, Zambia
-                </p><br>
-            </div>
-            
+            <a href="tel:+13214449672"><i class="fa-solid fa-phone"></i> +1 (321)-444-9672</a><br>
+            <a href="mailto:nmwiinga@gmail.com"><i class="fa-solid fa-envelope"></i> nmwiinga@gmail.com</a>
+            <p>Orlando, Florida</p>
+
+            <a href="tel:+1917889466"><i class="fa-solid fa-phone"></i> +1 (917)-889-466</a><br>
+            <a href="mailto:chandaleo41@gmail.com"><i class="fa-solid fa-envelope"></i> chandaleo41@gmail.com</a>
+            <p>College Park, Maryland</p>
+
+            <a href="tel:+260761955619"><i class="fa-solid fa-phone"></i> +260 761 955 619</a><br>
+            <a href="mailto:chizalemasammy@gmail.com"><i class="fa-solid fa-envelope"></i> chizalemasammy@gmail.com</a>
+            <p>Lusaka, Zambia</p>
           </div>
         </div>
       </div>
-      <div class="container-fluid bottom footer p-2">
+      <div class="container-fluid bottom-footer p-2">
         <div class="row">
           <div class="col-12 text-center">
-            <p>Mirriam Chisunta Chikwamu Web Development copyright © 2022 - All rights reserved</p>
+            <p>CHICHASA Foundation &copy; 2025 - All rights reserved</p>
           </div>
-
         </div>
-
       </div>
     </footer>
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="bootstrap-5.1.3-dist/js/bootstrap.bundle.js"></script> 
-
-
- 
+    <!-- Bootstrap JS (CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true
+      });
+    </script>
   </body>
 </html>

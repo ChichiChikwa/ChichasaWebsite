@@ -1,59 +1,366 @@
-#topHeader {
-    background-color:#EE5A24;
-    border-bottom: 1px pink;
+/* ===== CSS Variables for consistent theming ===== */
+:root {
+    --primary: #c23616;
+    --primary-light: #EE5A24;
+    --dark: #1a1a1a;
+    --light-bg: #fdf6f0;
+    --accent: #d4a8d4;
+    --white: #ffffff;
+    --text-dark: #333333;
+    --text-light: #f5f5f5;
+    --transition: all 0.3s ease;
 }
+
+/* ===== Global Styles ===== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-dark);
+    line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: 700;
+}
+
+/* ===== Top Header Bar ===== */
+#topHeader {
+    background-color: var(--primary-light);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
 #topHeader a {
     text-align: right;
-    color:black;
-    font-weight: 800;
-    font-size: 1rem;
+    color: var(--white);
+    font-weight: 600;
+    font-size: 0.9rem;
     text-decoration: none;
+    transition: var(--transition);
 }
+
+#topHeader a:hover {
+    color: var(--dark);
+}
+
+#topHeader .fa-solid {
+    margin-right: 5px;
+}
+
+/* ===== Navigation ===== */
+.navbar {
+    padding: 0.8rem 1rem;
+}
+
+.nav-link {
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem !important;
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--primary-light) !important;
+}
+
+.nav-item.active .nav-link {
+    color: var(--primary-light) !important;
+    border-bottom: 2px solid var(--primary-light);
+}
+
+/* ===== Container Fluid Reset ===== */
 .container-fluid {
     padding-left: 0;
     padding-right: 0;
     margin-left: 0;
     margin-right: 0;
-/* Footer*/
 }
-.default-footer {
-    background-color: black;
+
+/* ===== Section Headers ===== */
+.section-header {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 1rem 0;
 }
-.top-footer {
-    color:white;
+
+.section-header h3 {
+    margin: 0;
+    font-weight: 700;
+}
+
+/* ===== Hero Sections ===== */
+.top-hero-section {
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+}
+
+/* ===== Brand Color Text ===== */
+.text-brand {
+    color: var(--primary);
+}
+
+.text-brand-light {
+    color: var(--primary-light);
+}
+
+/* ===== Buttons ===== */
+.btn-brand {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 0.7rem 2rem;
+    border: 2px solid var(--primary);
+    border-radius: 30px;
     font-weight: 600;
-}
-.top-footer a {
-    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition);
 }
 
+.btn-brand:hover {
+    background-color: transparent;
+    color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(194, 54, 22, 0.3);
+}
 
-.col-12{
-    background-color:#EE5A24;
-}
-.bottom footer p{
-    color: white;
-}
-/*start of homepage styling*/
-.top-hero-section{
-   background-color: antiquewhite; 
-   color: black;
-   font-family: Verdana, Geneva, Tahoma, sans-serif;
-   font-weight: 400;
-}
-.size-ig{
+/* ===== SDG Icon Sizes ===== */
+.size-img {
     width: 100px;
     padding: 5px;
 }
 
-/* fontawesome icons*/
+/* ===== Cards ===== */
+.card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: var(--transition);
+}
 
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.card-img-top {
+    height: 300px;
+    object-fit: cover;
+}
+
+.card-title {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.card .title {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* ===== Carousel ===== */
+.carousel-item img {
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.carousel-caption h5 {
+    color: var(--primary-light);
+    font-weight: 700;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.carousel-caption p {
+    color: var(--white);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* ===== Footer ===== */
+.default-footer {
+    background-color: var(--dark);
+}
+
+.top-footer {
+    color: var(--white);
+    font-weight: 400;
+}
+
+.top-footer a {
+    text-decoration: none;
+}
+
+.top-footer h5 {
+    color: var(--primary-light);
+    margin-bottom: 1rem;
+}
+
+.bottom-footer p {
+    color: var(--text-light);
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* ===== Footer Social Icons ===== */
 .fa-brands {
-    color: plum;
+    color: var(--accent);
+    transition: var(--transition);
+    margin-right: 10px;
 }
 
+.fa-brands:hover {
+    color: var(--primary-light);
+    transform: scale(1.2);
+}
 
+/* ===== Footer Contact Links ===== */
+.footer-contact a {
+    color: var(--accent) !important;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-contact a:hover {
+    color: var(--primary-light) !important;
+}
+
+.footer-contact .fa-solid {
+    color: var(--accent);
+    margin-right: 5px;
+}
+
+.footer-contact p {
+    color: #999;
+    margin-bottom: 0.5rem;
+}
+
+/* ===== FontAwesome Icons ===== */
 .fa-solid {
-    color: plum;
+    color: var(--accent);
 }
 
+/* ===== About Us Page: Image Overlay ===== */
+.vision-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.vision-container .image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: 0.5s ease;
+    backface-visibility: hidden;
+}
+
+.vision-container .middle {
+    transition: 0.5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.vision-container:hover .image {
+    opacity: 0.3;
+}
+
+.vision-container:hover .middle {
+    opacity: 1;
+}
+
+.vision-overlay-text {
+    background-color: var(--primary);
+    color: var(--white);
+    font-size: 1.2rem;
+    padding: 16px 32px;
+    border-radius: 5px;
+}
+
+/* ===== Contact Form Styles ===== */
+.contact-form-section {
+    background-color: var(--light-bg);
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.contact-form-section input[type=text],
+.contact-form-section input[type=tel],
+.contact-form-section input[type=email],
+.contact-form-section select,
+.contact-form-section textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.contact-form-section input:focus,
+.contact-form-section select:focus,
+.contact-form-section textarea:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 5px rgba(194, 54, 22, 0.2);
+}
+
+.contact-form-section label {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+/* ===== Project Section ===== */
+.project-card {
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+.project-card:hover {
+    background-color: var(--light-bg);
+    transform: translateY(-3px);
+}
+
+.project-card img {
+    border-radius: 10px;
+}
+
+/* ===== AOS Animation Overrides ===== */
+[data-aos] {
+    transition-duration: 800ms;
+}
+
+/* ===== Responsive ===== */
+@media screen and (max-width: 768px) {
+    .carousel-item img {
+        max-height: 300px;
+    }
+
+    .card-img-top {
+        height: 200px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .contact-form-section .column {
+        width: 100%;
+        margin-top: 0;
+    }
+}
