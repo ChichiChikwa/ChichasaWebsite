@@ -146,8 +146,10 @@ h1, h2, h3, h4, h5 {
 }
 
 .card-img-top {
-    height: 300px;
-    object-fit: cover;
+    height: 350px;
+    object-fit: contain;
+    background-color: var(--light-bg);
+    padding: 10px;
 }
 
 .card-title {
@@ -164,7 +166,8 @@ h1, h2, h3, h4, h5 {
 /* ===== Carousel ===== */
 .carousel-item img {
     max-height: 500px;
-    object-fit: cover;
+    object-fit: contain;
+    background-color: #000;
 }
 
 .carousel-caption h5 {
@@ -343,10 +346,12 @@ h1, h2, h3, h4, h5 {
 @media screen and (max-width: 768px) {
     .carousel-item img {
         max-height: 300px;
+        object-fit: contain;
     }
 
     .card-img-top {
-        height: 200px;
+        height: 250px;
+        object-fit: contain;
     }
 
     h1 {

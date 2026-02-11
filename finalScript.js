@@ -1,4 +1,4 @@
-// Contact Form Validation
+// Contact Form Validation & Submission
 document.addEventListener('DOMContentLoaded', function() {
   const form = document.getElementById('contactForm');
 
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
 
       // Validate phone
-      const phonePattern = /^[\+]?[(]?[0-9]{1,4}[)]?[-\s\.]?[0-9]{1,4}[-\s\.]?[0-9]{1,9}$/;
+      var phonePattern = /^[\+]?[(]?[0-9]{1,4}[)]?[-\s\.]?[0-9]{1,4}[-\s\.]?[0-9]{1,9}$/;
       if (!phone.value.trim() || !phonePattern.test(phone.value.trim())) {
         phone.classList.add('is-invalid');
         phone.style.borderColor = '#c23616';
@@ -43,24 +43,40 @@ document.addEventListener('DOMContentLoaded', function() {
       }
 
       // Validate email
-      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!email.value.trim() || !emailPattern.test(email.value.trim())) {
         email.classList.add('is-invalid');
         email.style.borderColor = '#c23616';
         isValid = false;
       }
 
-      // If valid, show success message
+      // If valid, submit via Formspree
       if (isValid) {
-        form.style.display = 'none';
-        document.getElementById('formSuccess').style.display = 'block';
+        var formData = new FormData(form);
+
+        fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        }).then(function(response) {
+          if (response.ok) {
+            form.style.display = 'none';
+            document.getElementById('formSuccess').style.display = 'block';
+          } else {
+            alert('There was an issue submitting the form. Please try again or email us directly.');
+          }
+        }).catch(function(error) {
+          alert('There was a network error. Please try again or email us directly.');
+        });
       }
     });
 
     // Real-time validation feedback - clear errors on input
-    const fields = ['fname', 'lname', 'phone', 'email'];
+    var fields = ['fname', 'lname', 'phone', 'email'];
     fields.forEach(function(fieldId) {
-      const field = document.getElementById(fieldId);
+      var field = document.getElementById(fieldId);
       if (field) {
         field.addEventListener('input', function() {
           this.classList.remove('is-invalid');
